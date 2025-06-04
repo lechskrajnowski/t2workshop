@@ -52,7 +52,7 @@ resource "azurerm_linux_web_app" "example" {
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         
       - name: Update App Service
-        run: |
+        run:
           az webapp config container set \
             --name lechs-webapp-workshop \
             --resource-group rg-lechs \
