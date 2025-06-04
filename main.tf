@@ -8,6 +8,7 @@ terraform {
 }
 provider "azurerm" {
   features {}
+  resource_provider_registrations = "none"
 }
 
 terraform {
@@ -19,7 +20,7 @@ terraform {
   }
 }
 
-resource "azurerm_service_plan" {
+resource "azurerm_service_plan" "example" {
   name                = "lechs-app-service-plan"
   location            = "westeurope"
   resource_group_name = "rg-LechS"
@@ -28,7 +29,7 @@ resource "azurerm_service_plan" {
 }
 
 
-resource "azurerm_linux_web_app" {
+resource "azurerm_linux_web_app" "example" {
   name                = "lechs-webapp-workshop"
   location            = "westeurope"
   resource_group_name = "rg-LechS"
