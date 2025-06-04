@@ -19,7 +19,7 @@ terraform {
   }
 }
 
-resource "azurerm_service_plan" "esxample" {
+resource "azurerm_service_plan" {
   name                = "lechs-app-service-plan"
   location            = "westeurope"
   resource_group_name = "rg-LechS"
@@ -28,7 +28,7 @@ resource "azurerm_service_plan" "esxample" {
 }
 
 
-resource "azurerm_linux_web_app" "example" {
+resource "azurerm_linux_web_app" {
   name                = "lechs-webapp-workshop"
   location            = "westeurope"
   resource_group_name = "rg-LechS"
